@@ -27,7 +27,7 @@ parser.add_argument("--class_name_path", type=str, default="./data/coco.names",
                     help="The path of the class names.")
 parser.add_argument("--restore_path", type=str, default="./data/darknet_weights/yolov3.ckpt",
                     help="The path of the weights to restore.")
-parser.add_argument("--save_video", type=lambda x: (str(x).lower() == 'true'), default=False,
+parser.add_argument("--save_video", type=lambda x: (str(x).lower() == 'true'), default=True,
                     help="Whether to save the video detection results.")
 parser.add_argument("--camera", type=int, default=0,
                     help="What camera to use.")
@@ -44,6 +44,10 @@ video_frame_cnt = int(vid.get(7))
 video_width = int(vid.get(3))
 video_height = int(vid.get(4))
 video_fps = int(vid.get(5))
+
+if args.save_video:
+    fourcc = cv2.VideoWriter_fourcc('m', 'p', '4', 'v')
+    videoWriter = cv2.VideoWriter('video_result.mp4', fourcc, video_fps, (video_width, video_height))
 
 with tf.Session() as sess:
     input_data = tf.placeholder(tf.float32, [1, args.new_size[1], args.new_size[0], 3], name='input_data')
@@ -98,8 +102,8 @@ with tf.Session() as sess:
 
         cv2.putText(img_ori, '{:.2f}ms'.format((end_time - start_time) * 1000), (40, 40), 0,fontScale=1, color=(0, 255, 0), thickness=2)
         cv2.imshow('image', img_ori)
-        #if args.save_video:
-            #videoWriter.write(img_ori)
+        if args.save_video:
+            videoWriter.write(img_ori)
         if cv2.waitKey(1) & 0xFF == ord('q'):
             break
 
