@@ -84,8 +84,10 @@ with tf.Session() as sess:
 
 
         for i in range(len(boxes_)):
-            x0, y0, x1, y1 = boxes_[i]
-            plot_one_box(img_ori, [x0, y0, x1, y1], label=args.classes[labels_[i]] + ', {:.2f}%'.format(scores_[i] * 100), color=color_table[labels_[i]])
+            if(args.classes[labels_[i]] == "person"):
+                x0, y0, x1, y1 = boxes_[i]
+                if(x1-x0 <= 400 and y1-y0 <= 400 and scores_[i]*100>=80):
+                    plot_one_box(img_ori, [x0, y0, x1, y1], label=args.classes[labels_[i]] + ', {:.2f}%'.format(scores_[i] * 100), color=color_table[labels_[i]])
 
             if args.classes[labels_[i]] == 'person' and args.save_video == True:
                 thing = img_ori[int(y0):int(y1), int(x0):int(x1)]
