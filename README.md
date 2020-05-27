@@ -30,9 +30,7 @@
 - Recomenda-se Linux para realizar os procedimentos.
 
 ## Instalação
-Sugestão: Use os seguintes trechos de código em ordem para instalar os requisitos. Necessário ter git e wget.
-- `sudo apt install git` (Linux)
-- `sudo apt install wget` (Linux)
+Sugestão: Use os seguintes trechos de código em ordem para instalar os requisitos. Necessário ter os pacotes git e wget.
 
 ### Python 
 Recomenda-se versão 3.7
