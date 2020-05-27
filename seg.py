@@ -4,11 +4,15 @@ import time
 from datetime import datetime
 from datetime import date
 
+HORA = 0
+MINUTO = 0
+SEGUNDO = 1
+
 while(1):
 
     horario = datetime.now()
     
-    if horario.hour == 18 and horario.minute == 56 and horario.second == 30:
+    if horario.hour == HORA and horario.minute == MINUTO and horario.second == SEGUNDO:
         data = datetime.now()
         dia = data.day - 1
         mes = data.month

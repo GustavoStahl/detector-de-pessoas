@@ -1,4 +1,3 @@
-
 from __future__ import division, print_function
 
 import tensorflow as tf
@@ -90,7 +89,7 @@ with tf.Session() as sess:
         for i in range(len(boxes_)):
             if(args.classes[labels_[i]] == "person"):
                 x0, y0, x1, y1 = boxes_[i]
-                if(x1-x0 <= 400 and y1-y0 <= 400 and scores_[i]*100>=80):
+                if(x1-x0 <= 600 and y1-y0 <= 600 and scores_[i]*100>=85):
                     agora = datetime.datetime.now()
                     hora = agora.hour
                     minuto = agora.minute
@@ -116,10 +115,6 @@ with tf.Session() as sess:
                     
                     plot_one_box(img_ori, [x0, y0, x1, y1], label=args.classes[labels_[i]] + ', {:.2f}%'.format(scores_[i] * 100), color=color_table[labels_[i]])
 
-            if args.classes[labels_[i]] == 'person' and args.save_video == True:
-                thing = img_ori[int(y0):int(y1), int(x0):int(x1)]
-                cv2.imwrite('data/objects/'+str(datetime.datetime.now()) + '.jpg', thing)
-                print(thing.shape)
 
 
 
