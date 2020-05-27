@@ -25,7 +25,7 @@
 - Embora seja possível alterar os horários mencionados, é recomendado que deixe nas configurações atuais. O intuíto do projeto é realizar diariamente um backup dos dados, criando uma pasta referente ao dia anterior. 
 
 ## Recomendações ao usuário para utilizar o repositório
-- Use o Conda para criar ambientes virtuais<br/>
+- Use o Conda para criar ambientes virtuais
 - Use cuda e cudnn para ter um melhor desempenho (verifique se a GPU é compatível)
 - Recomenda-se Linux para realizar os procedimentos
 
@@ -40,7 +40,7 @@ Recomenda-se versão 3.7
 
 ### Instale as dependecias necessarias
 - ### Tensorflow (recomenda-se versões <= 1.15.2)
-`pip install tensorflow==1.15.2` (CPU)
+`pip install tensorflow==1.15.2` (CPU)<br/>
 `pip install tensorflow-gpu==1.15.2` (GPU)
 
 - ### Opencv
