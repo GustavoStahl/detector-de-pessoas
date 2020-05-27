@@ -1,7 +1,7 @@
 # Sistema de segurança autônomo através de detecção de pessoas
 
 ## Funcionamento do projeto
-![](https://j.gifs.com/r8W4GL.gif)
+![](funcionamento.gif)
 
 ## Funcionalidades do projeto
 ### Encontra e mostra pessoas
