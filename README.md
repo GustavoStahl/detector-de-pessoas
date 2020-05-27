@@ -39,8 +39,9 @@ Recomenda-se versão 3.7
 ```conda create -n <nome-do-ambiente> python=3.7``` 
 
 ### Instale as dependecias necessarias
-- ### Tensorflow (recomenda-se versão <= 1.15)
-```pip install tensorflow==1.15```
+- ### Tensorflow (recomenda-se versões <= 1.15.2)
+`pip install tensorflow==1.15.2` (CPU)
+`pip install tensorflow-gpu==1.15.2` (GPU)
 
 - ### Opencv
 ```pip install opencv-python```
