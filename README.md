@@ -17,50 +17,55 @@
 
 
 
-## Recomendações ao usuário para utilizar o repositório:
+## Recomendações ao usuário para utilizar o repositório
 - Use o Conda para criar ambientes virtuais<br/>
 - Use cuda e cudnn para ter um melhor desempenho (verifique se a GPU é compatível)
 
 
-## Instalação e recomendações:
-### Python (recomenda-se versão 3.7):
-- ```conda create -n <nome-do-ambiente> python=3.7``` (exemplo de instalação do python através da criação de um ambiente virtual utilizando o anaconda)
+## Instalação e recomendações
 
-### Tensorflow (recomenda-se versão <= 1.15):
-- ```pip install tensorflow==1.15```
+### Sistema Operacional
+Recomenda-se Linux para realizar os procedimentos
 
-### Opencv:
-- ```pip install opencv-python```
+### Python 
+Recomenda-se versão 3.7
 
-### Tqdm:
-- ```pip install tqdm```
+### Crie um ambiente virtual com o `conda`
+```conda create -n <nome-do-ambiente> python=3.7``` 
 
-### Baixe o repositório do projeto e salve-o no disco
-- ```git clone https://github.com/GustavoStahl/detector-de-pessoas.git```
+### Instale as dependecias necessarias
+- ### Tensorflow (recomenda-se versão <= 1.15)
+```pip install tensorflow==1.15```
 
-### Baixe o arquivo dos pesos da rede
-- ```https://pjreddie.com/media/files/yolov3.weights``` 
+- ### Opencv
+```pip install opencv-python```
+
+- ### Tqdm
+```pip install tqdm```
+
+### Clone o repositório do projeto e salve-o no disco
+```git clone https://github.com/GustavoStahl/detector-de-pessoas.git```
+
+### Va para a pasta `./data/darknet_weights` e baixe o arquivo dos pesos da rede
+```cd detector-de-pessoas/data/darknet_weights && wget https://pjreddie.com/media/files/yolov3.weights``` 
    
-### Salve o arquivo baixado em: "./data/darknet_weights/", dentro do repositório do projeto
-   
-### Execute o comando abaixo no terminal
-- ```python convert_weight.py```
-
+### Converta os pesos com o arquivo [**convert_weight.py**](https://github.com/GustavoStahl/detector-de-pessoas/blob/master/convert_weight.py) na pasta base do projeto
+```cd .. && cd .. && python convert_weight.py```
 
 ## Instruções para uso do projeto
 
 ### O que faz o arquivo seg.py?
 - seg.py é um sistema de backup que cria uma pasta dentro da pasta "Banco" com o dia atual marcado no sistema e move todas as imagens salvas na pasta "YOLO" para essa pasta criada. Nesse processo, as imagens serão movidas para dentro de pastas demarcadas com horários, mantendo a organização proposta. Vale ressaltar que o uso desse sistema é recomendado, porém opcional.
 
-### Os valores das variáveis globais HORA, MINUTO e SEGUNDO no arquivo seg.py:
+### Os valores das variáveis globais HORA, MINUTO e SEGUNDO no arquivo seg.py
 - HORA, MINUTO e SEGUNDO: hora, minuto e segundo desejados pelo usuário para armazenar na pasta "Banco" todas as imagens salvas no dia, semelhante a um backup.
 - Embora seja possível alterar os horários mencionados, é recomendado que deixe nas configurações atuais. O intuíto do projeto é realizar diariamente um backup dos dados, criando uma pasta referente ao dia anterior. 
 
 ### Caso queira utilizar o seg.py, inicie no terminal o arquivo:
-- ```python seg.py```
+```python seg.py```
 
-### Inicie o sistema com uma câmera reconhecida no computador:
-- ```python camera_test.py --camera X``` (substitua X pelo número de reconhecimento da camera pelo sistema, exemplo: X=0 para webcam))
+### Inicie o sistema com uma câmera reconhecida no computador
+```python camera_test.py --camera X``` (substitua X pelo número de reconhecimento da camera pelo sistema, exemplo: X=0 para webcam))
 	
 ## Informações
 Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a respeito desse e outros projetos, acesse: https://sites.google.com/unesp.br/rasunespbauru/home
