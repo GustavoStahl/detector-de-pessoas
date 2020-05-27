@@ -52,7 +52,7 @@ Recomenda-se versão 3.7
 ### Clone o repositório do projeto e salve-o no disco
 ```git clone https://github.com/GustavoStahl/detector-de-pessoas.git```
 
-### Va para a pasta [**darknet_weights**](https://github.com/GustavoStahl/detector-de-pessoas/tree/master/data/darknet_weights) e baixe o arquivo dos pesos da rede
+### Va para a pasta [**darknet_weights**](https://github.com/GustavoStahl/detector-de-pessoas/tree/master/data/darknet_weights) e baixe o arquivo de pesos da rede
 ```cd detector-de-pessoas/data/darknet_weights && wget https://pjreddie.com/media/files/yolov3.weights``` 
    
 ### Converta os pesos com o arquivo [**convert_weight.py**](https://github.com/GustavoStahl/detector-de-pessoas/blob/master/convert_weight.py) na pasta base do projeto
@@ -74,7 +74,7 @@ Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a
 - [**Vinicius Pilan**](https://github.com/ViniPilan)
 - [**Vitor Vecina**]()
 
-## Licensa
+## Licença
 
 Este projeto é gratuito e sem fins lucrativos. Sua venda é proibida
 
