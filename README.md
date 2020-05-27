@@ -29,7 +29,7 @@
 -pip install opencv-python
 
 ### 4. Tqdm:
--pip isntall tqdm
+-pip install tqdm
 
 ### 5. Baixe o repositório do projeto e salve-o no disco
 -git clone https://github.com/GustavoStahl/detector-de-pessoas.git
