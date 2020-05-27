@@ -64,3 +64,18 @@
 	
 ## Informações
 Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a respeito desse e outros projetos, acesse: https://sites.google.com/unesp.br/rasunespbauru/home
+
+## Autores
+
+- [**Fabricio Amoroso**](https://github.com/lefabricion)
+- [**Gustavo Stahl**](https://github.com/GustavoStahl)
+- [**Vinicius Pilan**](https://github.com/ViniPilan)
+- [**Vitor Vecina**]()
+
+## Licensa
+
+Este projeto é gratuito e sem fins lucrativos. Sua venda é proibida
+
+## Créditos
+
+Baseado no projeto: [**YOLOv3_TensorFlow**](https://github.com/wizyoung/YOLOv3_TensorFlow)
