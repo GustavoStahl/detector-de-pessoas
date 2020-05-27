@@ -15,11 +15,6 @@
 ### Realiza backup dos dados já armazenados de forma autônoma
 - Em um determinado horário definido pelo usuário, uma nova pasta será criada dentro da pasta "Banco". Essa nova pasta terá como nome o dia atual e nela serão armazenadas as imagens salvas pelo programa no dia em questão de subpastas. Essas subpastas de "Banco" serão criadas com os mesmos nomes das subpastas de "YOLO", preservando o sistema de organização já explicado anteriormente em um dos tópicos acima. 
 
-## Recomendações ao usuário para utilizar o repositório
-- Use o Conda para criar ambientes virtuais<br/>
-- Use cuda e cudnn para ter um melhor desempenho (verifique se a GPU é compatível)
-- Recomenda-se Linux para realizar os procedimentos
-
 ## Instruções para uso do projeto
 
 ### O que faz o arquivo [**seg.py**](https://github.com/GustavoStahl/detector-de-pessoas/blob/master/seg.py)?
@@ -29,7 +24,12 @@
 - HORA, MINUTO e SEGUNDO: hora, minuto e segundo desejados pelo usuário para armazenar na pasta "Banco" todas as imagens salvas no dia, semelhante a um backup.
 - Embora seja possível alterar os horários mencionados, é recomendado que deixe nas configurações atuais. O intuíto do projeto é realizar diariamente um backup dos dados, criando uma pasta referente ao dia anterior. 
 
-## Instalação e recomendações
+## Recomendações ao usuário para utilizar o repositório
+- Use o Conda para criar ambientes virtuais<br/>
+- Use cuda e cudnn para ter um melhor desempenho (verifique se a GPU é compatível)
+- Recomenda-se Linux para realizar os procedimentos
+
+## Instalação
 Sugestão: Use os seguintes trechos de código em ordem para instalar os requisitos
 
 ### Python 
