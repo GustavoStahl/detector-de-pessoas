@@ -62,7 +62,7 @@ Recomenda-se versão 3.7
 ```python seg.py```
 
 ### Inicie o sistema com uma câmera reconhecida no computador
-```python camera_test.py --camera X``` (substitua X pelo número de reconhecimento da camera pelo sistema, exemplo: X=0 para webcam))
+`python camera_test.py --camera X` (Substitua X pelo número de reconhecimento da camera pelo sistema. Exemplo: `--camera 0` para webcam)
 	
 ## Informações
 Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a respeito desse e outros projetos, acesse: https://sites.google.com/unesp.br/rasunespbauru/home
@@ -76,7 +76,7 @@ Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a
 
 ## Licença
 
-Este projeto é gratuito e sem fins lucrativos. Sua venda é proibida
+Este projeto é gratuito e sem fins lucrativos. Sua venda é proibida.
 
 ## Créditos
 
