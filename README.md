@@ -39,19 +39,19 @@ Recomenda-se versão 3.7
 ```conda create -n <nome-do-ambiente> python=3.7``` 
 
 ### Instale as dependecias necessarias
-### Tensorflow (recomenda-se versão <= 1.15)
+- ### Tensorflow (recomenda-se versão <= 1.15)
 ```pip install tensorflow==1.15```
 
-### Opencv
+- ### Opencv
 ```pip install opencv-python```
 
-### Tqdm
+- ### Tqdm
 ```pip install tqdm```
 
 ### Clone o repositório do projeto e salve-o no disco
 ```git clone https://github.com/GustavoStahl/detector-de-pessoas.git```
 
-### Va para a pasta `./data/darknet_weights` e baixe o arquivo dos pesos da rede
+### Va para a pasta [**darknet_weights**](https://github.com/GustavoStahl/detector-de-pessoas/tree/master/data/darknet_weights) e baixe o arquivo dos pesos da rede
 ```cd detector-de-pessoas/data/darknet_weights && wget https://pjreddie.com/media/files/yolov3.weights``` 
    
 ### Converta os pesos com o arquivo [**convert_weight.py**](https://github.com/GustavoStahl/detector-de-pessoas/blob/master/convert_weight.py) na pasta base do projeto
