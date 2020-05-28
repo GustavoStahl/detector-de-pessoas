@@ -30,7 +30,7 @@
 - Recomenda-se Linux para realizar os procedimentos.
 
 ## Instalação
-Sugestão: Use os seguintes trechos de código em ordem para instalar os requisitos. Necessário ter os pacotes git e wget.
+**Sugestão:** Use os seguintes trechos de código em ordem para instalar os requisitos. Necessário ter os pacotes git e wget.
 
 ### Python 
 Recomenda-se versão 3.7
@@ -73,7 +73,7 @@ Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a
 - [**Fabricio Amoroso**](https://github.com/lefabricion)
 - [**Gustavo Stahl**](https://github.com/GustavoStahl)
 - [**Vinicius Pilan**](https://github.com/ViniPilan)
-- [**Vitor Vecina**]()
+- [**Vitor Vecina**](https://github.com/vitorvecina)
 
 ## Licença
 
