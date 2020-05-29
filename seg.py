@@ -28,6 +28,9 @@ while(1):
         os.system('find ./YOLO/"6-12"/ -type f -name *.jpg -exec mv {} Banco/"%s-%s-%s"/"6-12" \;' % (dia, mes, ano))
         os.system('find ./YOLO/"12-18"/ -type f -name *.jpg -exec mv {} Banco/"%s-%s-%s"/"12-18" \;' % (dia, mes, ano))
         os.system('find ./YOLO/"18-24"/ -type f -name *.jpg -exec mv {} Banco/"%s-%s-%s"/"18-24" \;' % (dia, mes, ano))
+        
+        print('O sistema de organização foi acionado!')
+
         time.sleep(5)
 
         

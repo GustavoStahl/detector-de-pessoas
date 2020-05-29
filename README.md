@@ -8,21 +8,26 @@
 - Encontra pessoas na imagem e as mostra demarcadas por uma caixa em tempo real.
 
 ### Armazena pessoas encontradas de forma organizada e autônoma
-- Salva em tempo real o conteúdo das caixas demarcadas em subpastas encontradas na pasta "YOLO". As imagens resultantes desse processo são nomeadas de acordo com o tempo do sistema operacional em que foram encontradas pelo programa. 
-- As subpastas de "YOLO" serão nomeadas por intervalos de tempo de seis horas. Sendo assim, quatro pastas serão criadas: "0-6","6-12", "12-18", "18-24".
+- Salva em tempo real o conteúdo das caixas demarcadas em subpastas encontradas na pasta "YOLO". As imagens resultantes desse processo são nomeadas de acordo com o tempo do sistema operacional em que a pessoa foi encontrada pelo programa. 
+- As subpastas de "YOLO" são nomeadas por intervalos de tempo de seis horas. Sendo assim, existem quatro pastas: "0-6","6-12", "12-18", "18-24".
 - Ao acessar a subpasta com nome relativo ao intervalo de tempo atual, pode-se observar a criação das imagens em tempo real.
 
-### Realiza backup dos dados já armazenados de forma autônoma
-- Em um determinado horário definido pelo usuário, uma nova pasta será criada dentro da pasta "Banco". Essa nova pasta terá como nome o dia atual e nela serão armazenadas as imagens salvas pelo programa no dia em questão de subpastas. Essas subpastas de "Banco" serão criadas com os mesmos nomes das subpastas de "YOLO", preservando o sistema de organização já explicado anteriormente em um dos tópicos acima. 
+### Organiza os dados já armazenados de forma autônoma
+- Para acionar esse recurso, é necessário que o arquivo seg.py tenha uma execução constante. Para isso, basta executá-lo em um novo terminal. O sistema de backup foi desenvolvido para a plataforma Linux e, por isso, pode necessitar de adaptações para outras plataformas.
+- Mais informações sobre seg.py estão localizadas no próximo tópico. 
+
 
 ## Instruções para uso do projeto
 
-### O que faz o arquivo [**seg.py**](https://github.com/GustavoStahl/detector-de-pessoas/blob/master/seg.py)?
-- seg.py é um sistema de backup que cria uma pasta dentro da pasta "Banco" com o dia atual marcado no sistema e move todas as imagens salvas na pasta "YOLO" para essa pasta criada. Nesse processo, as imagens serão movidas para dentro de pastas demarcadas com horários, mantendo a organização proposta. Vale ressaltar que o uso desse sistema é recomendado, porém opcional.
+### O que faz o arquivo [**seg.py**](https://github.com/GustavoStahl/detector-de-pessoas/blob/master/seg.py) e como deve ser utilizado?
+
+- seg.py é um sistema de organização que cria uma pasta dentro da pasta "Banco" com o nome referente ao dia anterior marcado no sistema e move todas as imagens salvas nas subpastas de "YOLO" para subpastas da nova pasta criada. Todo esse processo ocorre as 00:00 am do sistema em que o programa seg.py está sendo executado. Vale ressaltar que o uso desse sistema é recomendado, porém opcional.
+- As subpastas de "Banco" serão criadas com os mesmos nomes das subpastas de "YOLO", preservando o sistema de organização já explicado anteriormente em um dos tópicos acima. 
+- seg.py deve estar em constante execução no sistema para que a autonomia do sistema esteja de acordo com a ideia proposta no projeto. Portanto, recomenda-se que ele seja executado em um terminal separado e que não seja interrompido em nenhum momento.
 
 ### Os valores das variáveis globais HORA, MINUTO e SEGUNDO no arquivo seg.py
-- HORA, MINUTO e SEGUNDO: hora, minuto e segundo desejados pelo usuário para armazenar na pasta "Banco" todas as imagens salvas no dia, semelhante a um backup.
-- Embora seja possível alterar os horários mencionados, é recomendado que deixe nas configurações atuais. O intuíto do projeto é realizar diariamente um backup dos dados, criando uma pasta referente ao dia anterior. 
+- HORA, MINUTO e SEGUNDO: hora, minuto e segundo em que serão armazenadas, na pasta "Banco", todas as imagens salvas durante o dia anterior.
+- Embora seja possível alterar os horários mencionados, é recomendado que deixe nas configurações padrões (00:00:01 - hora:minuto:segundo). O intuíto do projeto é realizar diariamente a organização dos dados, criando uma pasta referente ao dia anterior. 
 
 ## Recomendações ao usuário para utilizar o repositório
 - Utilize o conda para criar ambientes virtuais.
@@ -73,7 +78,7 @@ Este projeto é parte dos projetos da RAS Unesp Bauru. Para mais informações a
 
 - [**Fabricio Amoroso**](https://github.com/lefabricion)
 - [**Gustavo Stahl**](https://github.com/GustavoStahl)
-- [**Vinicius Pilan**](https://github.com/ViniPilan)
+- [**Vinícius Pilan**](https://github.com/ViniPilan)
 - [**Vitor Vecina**](https://github.com/vitorvecina)
 
 ## Licença
