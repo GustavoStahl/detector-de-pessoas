@@ -110,6 +110,7 @@ with tf.Session() as sess:
                     nome = '%s/%s-%s-%s.jpg' % (pasta, hora, minuto, segundo)
                     
                     #Salva box em jpeg--------------------------------------------------------------
+                    x0, x1, y0, y1 = list(map(lambda x: 0 if x<0 else x, [x0, x1, y0, y1]))
                     cv2.imwrite(nome, img_ori[int(y0):int(y1), int(x0):int(x1)])
                     #-------------------------------------------------------------------------------
                     
