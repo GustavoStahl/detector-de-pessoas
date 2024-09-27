@@ -90,6 +90,28 @@ with tf.Session() as sess:
             if(args.classes[labels_[i]] == "person"):
                 x0, y0, x1, y1 = boxes_[i]
                 if(x1-x0 <= 300 and y1-y0 <= 300 and scores_[i]*100>=80):
+                    agora = datetime.datetime.now()
+                    hora = agora.hour
+                    minuto = agora.minute
+                    segundo = agora.second
+
+                    if hora >= 0 and hora < 6:
+                        pasta = 'YOLO/0-6'
+                    
+                    if hora >= 6 and hora < 12:
+                        pasta = 'YOLO/6-12'
+                        
+                    if hora >= 12 and hora < 18:
+                        pasta = 'YOLO/12-18'
+                            
+                    if hora >= 18 and hora < 24:
+                        pasta = 'YOLO/18-24'
+                    
+                    nome = '%s/%s-%s-%s.jpg' % (pasta, hora, minuto, segundo)
+                    
+                    #Salva box em jpeg com o nome no formato hora-minuto-segundo.jpg----------------
+                    cv2.imwrite(nome, img_ori[int(y0):int(y1), int(x0):int(x1)])
+                    #-------------------------------------------------------------------------------
                     plot_one_box(img_ori, [x0, y0, x1, y1], label=args.classes[labels_[i]] + ', {:.2f}%'.format(scores_[i] * 100), color=color_table[labels_[i]])
         cv2.putText(img_ori, '{:.2f}ms'.format((end_time - start_time) * 1000), (40, 40), 0,
                     fontScale=1, color=(0, 255, 0), thickness=2)
